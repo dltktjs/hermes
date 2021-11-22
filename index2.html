@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <link rel="shortcut icon" href="./hermes.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Hermes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+
+    <style>
+        .logo{
+          position: absolute;
+          background-color: white;
+          top: 0;
+          width: 100%;
+          height: 105px;
+        }
+
+        .header img{height: 100px; padding-left: 46%;}
+        a{color: rgb(95, 85, 85);}
+        .search{
+          position: absolute;
+          right: 0;
+          font-size: 30px;
+          top: 25px;
+        }
+        input{
+          width: 100px;
+          border-radius: 5px;
+          margin-left: 15px;
+        }
+        .mb-3{
+          background-color: rgb(236, 210, 160);
+        }
+        .mb-3 {
+         margin-bottom: 0rem!important;
+        }
+        .nav{
+          margin-top: 105px;
+        }
+        .nav-link{
+          color: black;
+          font-weight: bolder;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+          background-color: wheat;
+          color: white;
+        }
+        .swiper {
+        width: 100%;
+        height: 100%;
+        }
+
+        .swiper-slide {
+        overflow: hidden;
+        }
+        .swiper-slide img{
+          height: 40em;
+          width: 100%;
+          vertical-align: middle;
+          background-color: lemonchiffon;
+          background-image: url(./images/hermes-logo.png) ;
+          background-size: 50px;
+        }
+        .swiper-slide h1{
+          text-align: center;
+          position: absolute;
+          bottom: 0;
+          color: rgba(92, 14, 14, 0.89);
+        }
+       .tab-content{
+        padding-top: 1px;
+        padding-bottom: 0.1px;
+        background-color: rgb(228, 231, 188);
+        }
+     
+        .tab-content li:hover{
+          background-color: rgb(179, 49, 49);
+          cursor: pointer;
+        }
+        .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+          color: black;
+        }
+        .tab-content{
+          list-style: none;
+          padding-left: 10px;
+        }
+        .tab-content li{
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        .act02 li{
+          padding-left: 72px;
+        }
+        .act03 li{
+          padding-left: 172px;
+        }
+        .act04 li{
+          padding-left: 372px;
+        }
+        .act05 li{
+          padding-left: 506px;
+        }
+        .act06 li{
+          padding-left: 655px;
+        }
+        .act07 li{
+          padding-left: 736px;
+        }
+        .footer{
+          height: 184px;
+          background-color: rgb(231, 231, 231);
+        }
+        .footer .f-left{
+          position: absolute;
+          padding-top: 30px;
+          padding-left: 20px;
+        }
+        .footer .f-right{
+          position: absolute;
+          right: 0;
+        }
+        .f-right .box{
+          width:40px;
+          height:40px;
+          margin-left:12px;
+          border-radius:50%;
+          background-color:#999;
+          float: left;
+          font-size:24px;
+          color:#fff;
+          display:flex;
+          justify-content: center;
+          align-items:center;    
+          margin-top: 20px;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="warp">
+        <main>
+            <div class="header">
+                <h1 class="logo"><a href="./index.html"><img src="./images/hermes-logo2.png" alt="홈으로"></a></h1>
+            </div>
+        </main>
+        <a href="#" class="search"><i class="fas fa-search"><input type="text" value="검색" ></i></a>
+
+        <div class="link-contanier">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-men-tab" data-bs-toggle="pill" data-bs-target="#pills-men" type="button" role="tab" aria-controls="pills-men" aria-selected="true">MEN</button>
+          </li>
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-women-tab" data-bs-toggle="pill" data-bs-target="#pills-women" type="button" role="tab" aria-controls="pills-women" aria-selected="false">WOMEN</button>
+          </li>
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-out-tab" data-bs-toggle="pill" data-bs-target="#pills-out" type="button" role="tab" aria-controls="pills-out" aria-selected="false">홈, 아웃도어, 승마 용품</button>
+          </li>
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-jew-tab" data-bs-toggle="pill" data-bs-target="#pills-jew" type="button" role="tab" aria-controls="pills-jew" aria-selected="false">주얼리와 워치</button>
+          </li>
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-per-tab" data-bs-toggle="pill" data-bs-target="#pills-per" type="button" role="tab" aria-controls="pills-per" aria-selected="false">향수와 메이크업</button>
+          </li>
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-gift-tab" data-bs-toggle="pill" data-bs-target="#pills-gift" type="button" role="tab" aria-controls="pills-gift" aria-selected="false">기프트</button>
+          </li>
+          <li class="nav-item tab01" role="presentation">
+            <button class="nav-link" id="pills-spe-tab" data-bs-toggle="pill" data-bs-target="#pills-spe" type="button" role="tab" aria-controls="pills-spe" aria-selected="false">스페셜 에디션 및 서비스</button>
+          </li>
+        </ul>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade act01" id="pills-men" role="tabpanel" aria-labelledby="pills-men-tab">
+            <li>남성복</li></a>
+            <li>타이와 스카프</li>
+            <li>슈즈</li>
+            <li>가방과 가죽 소품</li>
+            <li>벨트</li>
+            <li>액세서리</li>
+          </div>
+          <div class="tab-pane fade act02" id="pills-women" role="tabpanel" aria-labelledby="pills-women-tab">
+            <li>여성복</li>
+            <li>스카프, 숄과 스톨</li>
+            <li>슈즈</li>
+            <li>가방과 가죽 소품</li>
+            <li>벨트</li>
+            <li>모자와 글러브</li>
+            <li>패션 주얼리</li>
+          </div>
+          <div class="tab-pane fade act03" id="pills-out" role="tabpanel" aria-labelledby="pills-out-tab">
+            <li>플래드와 쿠션</li>
+            <li>장식 오브제</li>
+            <li>테이블웨어</li>
+            <li>오피스 용품과 필기구</li>
+            <li>배스와 비치 용품</li>
+            <li>게임과 아웃도어 용품</li>
+            <li>승마와 반려견 용품</li>
+          </div>
+          <div class="tab-pane fade act04" id="pills-jew" role="tabpanel" aria-labelledby="pills-jew-tab">
+            <li>주얼리</li>
+            <li>워치</li>
+            <li>애플 워치 에르메스</li>
+          </div>
+          <div class="tab-pane fade act05" id="pills-per" role="tabpanel" aria-labelledby="pills-per-tab">
+            <li>향수</li>
+            <li>메이크업</li>
+          </div>
+          <div class="tab-pane fade act06" id="pills-gift" role="tabpanel" aria-labelledby="pills-gift-tab">
+            <li>여성용 기프트</li>
+            <li>남성용 기프트</li>
+            <li>베이비 기프트</li>
+          </div>
+          <div class="tab-pane fade act07" id="pills-spe" role="tabpanel" aria-labelledby="pills-spe-tab">
+            <li>맞춤 제작 오브제</li>
+          </div>
+        </div>
+    </section>
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner01.png" />
+          <h1>실크 커버</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner02.png" />
+          <h1>친숙한 아이템</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner03.png" />
+          <h1>마음을 사로잡는 오브제</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner04.png" />
+          <h1>2021 가을-겨울 남성복 컬렉션</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner05.png" />
+          <h1>자연의 컬러</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner06.png" />
+          <h1>시즌을 물들이는 컬러</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner07.png" />
+          <h1>트렌디한 스타일</h1>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img src="./images/banner08.png" />
+          <h1>에르메스의 일원이 된다는 것</h1>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <footer class="footer">
+    
+      <div class="f-left">
+        대한민국 © Hermès 2021. 무단 전재와 무단 복제를 금함.
+        <br>
+        에르메스코리아(유) | 주소 및 연락처 : 서울시 강남구 도산대로45길 7 (02)-542-6622
+        <br>
+        대표자 : 악셀 듀마, 플로리앙 크랭 ㅣ사업자등록번호 : 120-81-71453
+        <br>
+        메일문의 : contact.kr@hermes.com ㅣ호스팅서비스 : 에르메스 인터내셔널
+        <br>
+        통신판매업 신고번호 : 제2020-서울강남-02965호 (사업자 정보 확인)
+      </div>
+      <div class="f-right">
+        <div class="box"><i class="fab fa-apple"></i></div>
+        <div class="box"><i class="fab fa-facebook-square"></i></div>
+        <div class="box"><i class="fab fa-google-play"></i></div>
+        <div class="box"><i class="fab fa-instagram-square"></i></div>
+        <div class="box"><i class="fab fa-twitter"></i></div>
+      </div>
+  </footer>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      zoom: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    $('.tab01').click(function(){
+      let idx = $(this).index();
+      $('.act01').not(this).removeClass('active show');
+      $('.act01').eq(idx).toggleClass('active show');
+    })
+
+  </script>
+</body>
+</html>
