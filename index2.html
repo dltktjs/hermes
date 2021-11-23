@@ -18,6 +18,10 @@
 
 
     <style>
+      a{
+        color: black;
+        text-decoration: none;
+      }
         .logo{
           position: absolute;
           background-color: white;
@@ -38,7 +42,9 @@
           width: 100px;
           border-radius: 5px;
           margin-left: 15px;
+          border:solid 1px black;
         }
+        
         .mb-3{
           background-color: rgb(236, 210, 160);
         }
@@ -47,7 +53,71 @@
         }
         .nav{
           margin-top: 105px;
+          display: block;
         }
+        .main-nav{
+          list-style-type: none;
+          display: flex;
+          justify-content: space-evenly;
+          margin: -15px;
+          padding-top: 25px;
+          padding-bottom: 10px;
+          background-color: antiquewhite;
+        }
+        .main-nav a{
+          font-size: 20px;
+          font-weight: bolder;
+          list-style: none;
+          color: black;
+        }
+        .main-nav a:hover{
+          color: red;
+        }
+        .main-nav li.active a{          
+          color: white;
+        }
+        /* .main-nav li{
+          list-style-type: none;
+          display: inline-flex;
+          margin-left: 10px;
+          background-color: antiquewhite;
+
+        } */
+        .container2{
+          background-color: rgba(202, 191, 191, 0.678);
+        }
+        .sub-nav{
+          margin-top: 15px;
+        }
+        .sub-nav li{
+          list-style: none;
+          float: left;
+          padding-left: 30px;
+          padding-top: 10px;
+        }
+        .sub-nav>ul{
+          margin-bottom: 0;
+        }
+        .sub-nav>ul>li{
+          display: none;
+          padding-bottom: 20px;
+        }
+
+        .sub-nav>ul>li.active{
+          display: block;
+        }
+        .sbu-nav li{
+          float: left;
+        }
+        .sub-nav a{
+          padding: 5px;
+          border: solid 3px rgba(255, 255, 255, 0.815);
+          border-radius: 10px;
+          background-color: rgba(153, 119, 119, 0.205);
+          font-weight: bold;
+        }
+        
+
         .nav-link{
           color: black;
           font-weight: bolder;
@@ -91,32 +161,6 @@
         .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
           color: black;
         }
-        .tab-content{
-          list-style: none;
-          padding-left: 10px;
-        }
-        .tab-content li{
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-        .act02 li{
-          padding-left: 72px;
-        }
-        .act03 li{
-          padding-left: 172px;
-        }
-        .act04 li{
-          padding-left: 372px;
-        }
-        .act05 li{
-          padding-left: 506px;
-        }
-        .act06 li{
-          padding-left: 655px;
-        }
-        .act07 li{
-          padding-left: 736px;
-        }
         .footer{
           height: 184px;
           background-color: rgb(231, 231, 231);
@@ -157,77 +201,111 @@
         </main>
         <a href="#" class="search"><i class="fas fa-search"><input type="text" value="검색" ></i></a>
 
-        <div class="link-contanier">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-men-tab" data-bs-toggle="pill" data-bs-target="#pills-men" type="button" role="tab" aria-controls="pills-men" aria-selected="true">MEN</button>
-          </li>
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-women-tab" data-bs-toggle="pill" data-bs-target="#pills-women" type="button" role="tab" aria-controls="pills-women" aria-selected="false">WOMEN</button>
-          </li>
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-out-tab" data-bs-toggle="pill" data-bs-target="#pills-out" type="button" role="tab" aria-controls="pills-out" aria-selected="false">홈, 아웃도어, 승마 용품</button>
-          </li>
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-jew-tab" data-bs-toggle="pill" data-bs-target="#pills-jew" type="button" role="tab" aria-controls="pills-jew" aria-selected="false">주얼리와 워치</button>
-          </li>
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-per-tab" data-bs-toggle="pill" data-bs-target="#pills-per" type="button" role="tab" aria-controls="pills-per" aria-selected="false">향수와 메이크업</button>
-          </li>
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-gift-tab" data-bs-toggle="pill" data-bs-target="#pills-gift" type="button" role="tab" aria-controls="pills-gift" aria-selected="false">기프트</button>
-          </li>
-          <li class="nav-item tab01" role="presentation">
-            <button class="nav-link" id="pills-spe-tab" data-bs-toggle="pill" data-bs-target="#pills-spe" type="button" role="tab" aria-controls="pills-spe" aria-selected="false">스페셜 에디션 및 서비스</button>
-          </li>
-        </ul>
-        </div>
-
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade act01" id="pills-men" role="tabpanel" aria-labelledby="pills-men-tab">
-            <li>남성복</li></a>
-            <li>타이와 스카프</li>
-            <li>슈즈</li>
-            <li>가방과 가죽 소품</li>
-            <li>벨트</li>
-            <li>액세서리</li>
-          </div>
-          <div class="tab-pane fade act02" id="pills-women" role="tabpanel" aria-labelledby="pills-women-tab">
-            <li>여성복</li>
-            <li>스카프, 숄과 스톨</li>
-            <li>슈즈</li>
-            <li>가방과 가죽 소품</li>
-            <li>벨트</li>
-            <li>모자와 글러브</li>
-            <li>패션 주얼리</li>
-          </div>
-          <div class="tab-pane fade act03" id="pills-out" role="tabpanel" aria-labelledby="pills-out-tab">
-            <li>플래드와 쿠션</li>
-            <li>장식 오브제</li>
-            <li>테이블웨어</li>
-            <li>오피스 용품과 필기구</li>
-            <li>배스와 비치 용품</li>
-            <li>게임과 아웃도어 용품</li>
-            <li>승마와 반려견 용품</li>
-          </div>
-          <div class="tab-pane fade act04" id="pills-jew" role="tabpanel" aria-labelledby="pills-jew-tab">
-            <li>주얼리</li>
-            <li>워치</li>
-            <li>애플 워치 에르메스</li>
-          </div>
-          <div class="tab-pane fade act05" id="pills-per" role="tabpanel" aria-labelledby="pills-per-tab">
-            <li>향수</li>
-            <li>메이크업</li>
-          </div>
-          <div class="tab-pane fade act06" id="pills-gift" role="tabpanel" aria-labelledby="pills-gift-tab">
-            <li>여성용 기프트</li>
-            <li>남성용 기프트</li>
-            <li>베이비 기프트</li>
-          </div>
-          <div class="tab-pane fade act07" id="pills-spe" role="tabpanel" aria-labelledby="pills-spe-tab">
-            <li>맞춤 제작 오브제</li>
-          </div>
-        </div>
+        <nav class="nav">
+          <ul class="main-nav clearfix">
+              <li class="act" id="men">
+                  <a href="#">
+                      <span>MEN</span>
+                  </a>
+              </li>
+              <li class="act" id="women">
+                  <a href="#">
+                      <span>WOMEN</span>
+                  </a>
+              </li>
+              <li class="act" id="out">
+                  <a href="#">
+                      <span>홈, 아웃도어, 승마용품</span>
+                      <br>
+                  </a>
+              </li>
+              <li class="act" id="jew">
+                  <a href="#">
+                      <span>주얼리와 워치</span>
+                      <br>
+                  </a>
+              </li>
+              <li class="act" id="per">
+                  <a href="#">
+                      <span>향수와 메이크업</span>
+                      <br>
+                  </a>
+              </li>
+              <li class="act" id="gift">
+                  <a href="#">
+                      <span>기프트</span>
+                      <br>
+                  </a>
+              </li>
+              <li class="act" id="spe">
+                <a href="#">
+                    <span>스페셜 에디션 및 서비스</span>
+                    <br>
+                </a>
+            </li>
+          </ul>
+          <div class="sub-nav">
+              <ul class="container2 clearfix">
+                  <li id="sub01">
+                      <ul>
+                          <li><a href="#">남성복</a></li>
+                          <li><a href="#">타이와 스카프</a></li>
+                          <li><a href="#">슈즈</a></li>
+                          <li><a href="#">가방과 가죽 소품</a></li>
+                          <li><a href="#">벨트</a></li>
+                          <li><a href="#">액세서리</a></li>
+                      </ul>
+                  </li>
+                  <li id="sub02">
+                    <ul>
+                        <li><a href="#">여성복</a></li>
+                        <li><a href="#">스카프, 숄과 스톨</a></li>
+                        <li><a href="#">슈즈</a></li>
+                        <li><a href="#">가방과 가죽 소품</a></li>
+                        <li><a href="#">벨트</a></li>
+                        <li><a href="#">모자와 글러브</a></li>                                
+                        <li><a href="#">패션 주얼리</a></li>                                
+                      </ul>
+                  </li>
+                  <li id="sub03">
+                    <ul>
+                          <li><a href="#">플래드와 쿠션</a></li>
+                          <li><a href="#">장식 오브제</a></li>                                    
+                          <li><a href="#">테이블웨어</a></li>                                    
+                          <li><a href="#">오피스 용품과 필리구</a></li>                                    
+                          <li><a href="#">배스와 비치 용품</a></li>                                    
+                          <li><a href="#">게임과 아웃도어 용품</a></li>                                    
+                          <li><a href="#">승마와 반려견 용품</a></li>                                                              
+                      </ul>
+                  </li>
+                  <li id="sub04">
+                    <ul>
+                          <li><a href="#">주얼리</a></li>
+                          <li><a href="#">워치</a></li>                                    
+                          <li><a href="#">애플 워치 에르메스</a></li>                                                              
+                      </ul>
+                  </li>
+                  <li id="sub05">
+                    <ul>
+                          <li><a href="#">향수</a></li>
+                          <li><a href="#">메이크업</a></li>                          
+                      </ul>
+                  </li>
+                  <li id="sub06">
+                    <ul>
+                          <li><a href="#">여성용 기프트</a></li>
+                          <li><a href="#">남성용 기프트</a></li>
+                          <li><a href="#">베이비 기프트</a></li>                          
+                      </ul>
+                  </li>
+                  <li id="sub07">
+                    <ul>
+                        <li><a href="#">맞춤 제작 오브제</a></li>                                                  
+                    </ul>
+                </li>
+              </ul>
+          </div>                        
+      </nav>
     </section>
     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -317,11 +395,18 @@
         clickable: true,
       },
     });
+    $('.act').click(function(){
 
-    $('.tab01').click(function(){
-      let idx = $(this).index();
-      $('.act01').not(this).removeClass('active show');
-      $('.act01').eq(idx).toggleClass('active show');
+      // console.log($(this).index())
+      let act=$(this).index();
+
+      $('.act').not($(this)).removeClass('active');
+      $('.sub-nav>ul>li').not($('.sub-nav>ul>li').eq(act)).removeClass('active');
+
+      $(this).toggleClass('active');
+      // console.log($('.sub-nav li'));
+      $('.sub-nav>ul>li').eq(act).toggleClass('active');
+
     })
 
   </script>
